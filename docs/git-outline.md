@@ -40,7 +40,7 @@ You are the new apprentice archivist aboard **The Quillfish**, a library-ship th
 
 ## Series tie-in: the Archipelago
 
-All Trainhub programs share one world, **the Lantern Isles**, where each program is its own island. The enemy is **the Fog**, breathed out by the Grey Squall. Each island has one great lantern, and finishing the island relights it and clears the Fog there. The Harbor's lantern is its dock lights. The shared world doc is [archipelago.md](archipelago.md). The Blender thread owns it, so details here stay short.
+All programs share one world, **the Lantern Isles**, where each program is its own island. The enemy is **the Fog**, breathed out by the Grey Squall. Each island has one great lantern, and finishing the island relights it and clears the Fog there. The Harbor's lantern is its dock lights. The shared world doc is [archipelago.md](archipelago.md). The Blender outline owns it, so details here stay short.
 
 - **Git's place:** the Quillfish, a library-ship docked at **the Harbor**, the archipelago's central port.
 - **Neighbors:** Signal Island (Blender) is just offshore. The Lesson 2 story nods to it (see below). Blender's finale shows the Quillfish sailing past the new beacon toward the Harbor.

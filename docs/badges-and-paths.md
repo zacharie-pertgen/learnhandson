@@ -346,7 +346,7 @@ Time assumes each tier is about one hour, like the current Intro tiers. Adjust o
 
 - **Names:** "Keepsakes" for badges and "Voyages" for career paths.
 - **Voyages:** keep the 5 (Shaper's, Playmaker's, Harbormaster's, Tidereader's, Shipwright's), plus Sail Free.
-- **Unity island:** The Kiteworks. Crest is the Kitewright's Crest. Added to archipelago.md (flag word GLIDER is a proposal for the Unity thread).
+- **Unity island:** The Kiteworks. Crest is the Kitewright's Crest. Added to archipelago.md (flag word GLIDER is a proposal for the Unity lessons).
 - **Hint confirm:** one-tap confirm before the first hint tier in each lesson.
 - **Secrets:** show their riddle line on the shelf. The name stays hidden until found.
 - **Git tier words:** HARBOR, ANCHOR, VOYAGE (also recorded in git-outline.md).

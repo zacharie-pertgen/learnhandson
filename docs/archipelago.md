@@ -1,6 +1,6 @@
 # The Lantern Isles: Shared World Bible (v0.1)
 
-**Owner:** Blender lesson thread. Other program outlines link here and add their island's row.
+**Owner:** Blender lesson outline. Other program outlines link here and add their island's row.
 **Status:** draft. Name decided 2026-11-22.
 
 ---
@@ -85,7 +85,7 @@ Every program follows the same 3-tier structure.
 - **Tone:** cozy, low-poly, a little mysterious. Short story beats, then hands-on work.
 - **Format for every island:** about one hour, 6 lessons, one flag letter each, 3-tier optional hints (nudge, specific, answer), and both routes (simulated in the browser, or companion beside the real tool).
 - **Narrator:** each island has its own guide (Signal Island: the Old Keeper). The Quillfish crew can appear anywhere.
-- **Names:** avoid names that sound alike across islands (the Bash island became the Static Relay so it isn't confused with Signal Island). Add any new recurring character or place to the glossary below, so threads don't clash.
+- **Names:** avoid names that sound alike across islands (the Bash island became the Static Relay so it isn't confused with Signal Island). Add any new recurring character or place to the glossary below, so programs don't clash.
 
 ---
 
