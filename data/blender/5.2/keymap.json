@@ -1,0 +1,66 @@
+{
+  "version": "5.2",
+  "verified": "Checked against the default keymap shipped in Blender 5.2.4 LTS (left-click select), 2026-11-22. Profile notes for trackpad and no-numpad come from Blender's Input preferences.",
+  "profiles": {
+    "mouse": "Mouse with a scroll wheel you can click (middle mouse)",
+    "trackpad": "Trackpad (laptop)",
+    "numpad": "Keyboard has a number pad",
+    "nonumpad": "No number pad (turn on Emulate Numpad)"
+  },
+  "actions": {
+    "ui.toolbar":        { "label": "Toggle Toolbar", "keys": ["T"] },
+    "ui.sidebar":        { "label": "Toggle Sidebar", "keys": ["N"] },
+    "ed.undo":           { "label": "Undo", "keys": ["Ctrl + Z"] },
+    "ed.redo":           { "label": "Redo", "keys": ["Ctrl + Shift + Z"] },
+
+    "view.orbit":        { "label": "Orbit", "keys": ["Middle mouse drag"], "trackpad": ["Two-finger swipe", "Alt + Left drag"] },
+    "view.pan":          { "label": "Pan", "keys": ["Shift + Middle mouse drag"], "trackpad": ["Shift + Two-finger swipe", "Shift + Alt + Left drag"] },
+    "view.zoom":         { "label": "Zoom", "keys": ["Mouse wheel", "Ctrl + Middle mouse drag"], "trackpad": ["Pinch", "Ctrl + Two-finger swipe"] },
+    "view.front":        { "label": "Front view", "keys": ["Numpad 1"], "nonumpad": ["1"] },
+    "view.right":        { "label": "Right view", "keys": ["Numpad 3"], "nonumpad": ["3"] },
+    "view.top":          { "label": "Top view", "keys": ["Numpad 7"], "nonumpad": ["7"] },
+    "view.opposite":     { "label": "Opposite side (back, left, bottom)", "keys": ["Ctrl + Numpad 1/3/7"], "nonumpad": ["Ctrl + 1/3/7"] },
+    "view.persp":        { "label": "Perspective / orthographic", "keys": ["Numpad 5"], "nonumpad": ["5"] },
+    "view.frame_selected": { "label": "Frame selected", "keys": ["Numpad ."], "nonumpad": ["View menu > Frame Selected"] },
+    "view.frame_all":    { "label": "Frame everything", "keys": ["Home"], "mac": ["fn + Left arrow"] },
+    "view.pie":          { "label": "View pie menu", "keys": ["`"], "note": "The backtick key, left of 1." },
+    "view.gizmo":        { "label": "Navigation gizmo", "keys": ["Drag or click the gizmo (top right)"] },
+
+    "select.click":      { "label": "Select", "keys": ["Left click"] },
+    "select.toggle":     { "label": "Add to / remove from selection", "keys": ["Shift + Left click"] },
+    "select.all":        { "label": "Select all", "keys": ["A"] },
+    "select.none":       { "label": "Select none", "keys": ["Alt + A"] },
+    "select.invert":     { "label": "Invert selection", "keys": ["Ctrl + I"] },
+    "select.box":        { "label": "Box select", "keys": ["B"] },
+    "select.circle":     { "label": "Circle select", "keys": ["C"], "note": "Wheel changes the size. Right click or Esc to finish." },
+    "object.delete":     { "label": "Delete (asks first)", "keys": ["X"] },
+    "object.delete_now": { "label": "Delete (no question)", "keys": ["Delete"], "mac": ["fn + Delete"] },
+    "add.menu":          { "label": "Add menu", "keys": ["Shift + A"] },
+    "object.duplicate":  { "label": "Duplicate", "keys": ["Shift + D"] },
+
+    "transform.move":    { "label": "Move", "keys": ["G"] },
+    "transform.rotate":  { "label": "Rotate", "keys": ["R"] },
+    "transform.scale":   { "label": "Scale", "keys": ["S"] },
+    "transform.axis":    { "label": "Lock to an axis (after G, R or S)", "keys": ["X", "Y", "Z"] },
+    "transform.exclude": { "label": "Lock out one axis", "keys": ["Shift + X", "Shift + Y", "Shift + Z"] },
+    "transform.confirm": { "label": "Confirm / cancel", "keys": ["Enter", "Esc", "Right click"] },
+    "transform.clear":   { "label": "Reset location / rotation / scale", "keys": ["Alt + G", "Alt + R", "Alt + S"] },
+    "screen.redo_last":  { "label": "Adjust last operation", "keys": ["F9"], "mac": ["fn + F9"] },
+
+    "mode.edit":         { "label": "Toggle Edit Mode", "keys": ["Tab"] },
+    "mode.pie":          { "label": "Mode pie menu", "keys": ["Ctrl + Tab"] },
+    "mesh.vert":         { "label": "Vertex select mode", "keys": ["1"], "nonumpad": ["Header: vertex button"] },
+    "mesh.edge":         { "label": "Edge select mode", "keys": ["2"], "nonumpad": ["Header: edge button"] },
+    "mesh.face":         { "label": "Face select mode", "keys": ["3"], "nonumpad": ["Header: face button"] },
+    "mesh.loop_select":  { "label": "Select an edge loop", "keys": ["Alt + Left click"], "trackpad": ["Alt + Left click", "Select > Select Loops > Edge Loops"], "note": "If Alt + click orbits instead (Emulate 3 Button Mouse), use the Select menu." },
+    "view.xray":         { "label": "Toggle X-ray", "keys": ["Alt + Z"] },
+    "view.shading_pie":  { "label": "Shading pie", "keys": ["Z"] },
+    "view.hide":         { "label": "Hide / reveal", "keys": ["H", "Alt + H"] },
+
+    "mesh.extrude":      { "label": "Extrude", "keys": ["E"] },
+    "mesh.inset":        { "label": "Inset faces", "keys": ["I"], "note": "Press I again for individual faces." },
+    "mesh.loopcut":      { "label": "Loop cut", "keys": ["Ctrl + R"], "note": "Wheel sets the number of cuts. Click to place, then slide and click again." },
+    "mesh.bevel":        { "label": "Bevel", "keys": ["Ctrl + B"], "note": "Wheel sets segments." },
+    "overlay.stats":     { "label": "Show mesh statistics", "keys": ["Overlays menu > Statistics"] }
+  }
+}

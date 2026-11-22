@@ -1,0 +1,23 @@
+name: checks
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "0 9 * * 1" # Mondays: catch manual pages that moved
+jobs:
+  data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/check-data.mjs
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/check-links.mjs

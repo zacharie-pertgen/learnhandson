@@ -1,0 +1,18 @@
+{
+  "program": "blender",
+  "latest": "5.2",
+  "versions": [
+    {
+      "id": "5.2",
+      "label": "Blender 5.2 LTS",
+      "status": "current",
+      "testedWith": "5.2.4 LTS",
+      "tiers": {
+        "intro": { "status": "ready", "word": "BEACON" },
+        "intermediate": { "status": "planned", "word": "KEEPER" },
+        "advanced": { "status": "planned", "word": "SIGNAL" }
+      }
+    }
+  ],
+  "rules": "Each version lives at blender/<id>/ with its own data/blender/<id>/ files. Old versions are frozen but keep working. Unknown versions fall back to the nearest listed one."
+}

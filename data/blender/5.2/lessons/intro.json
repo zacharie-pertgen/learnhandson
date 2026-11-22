@@ -1,0 +1,342 @@
+{
+  "program": "blender",
+  "version": "5.2",
+  "tier": "intro",
+  "title": "Relight the Beacon",
+  "island": "Signal Island",
+  "narrator": "The Old Keeper",
+  "word": { "length": 6, "salt": "blender/5.2/intro/finale", "hash": "43926f1c1011c4cf71a538ca8f28baec30744b28be5c9deb91eb739165a70aee" },
+  "starterBase": "starter/blender/5.2/intro/",
+  "intro": "You are the new keeper of Signal Island, a tiny floating island whose beacon guides ships through the Fog. Last night the Grey Squall scattered the beacon's six signal flags across the island. Each flag carries one letter. Find all six and the beacon lights again.",
+  "lessons": [
+    {
+      "id": "l0",
+      "number": 0,
+      "title": "Prologue: Arrive on the island",
+      "minutes": 3,
+      "story": "Welcome ashore, keeper. Before we hunt for flags, let's get your bearings in the workshop.",
+      "goal": "Know the four main areas of Blender and set up your input device.",
+      "starter": null,
+      "starterNote": "Open Blender 5.2 and pick General from the splash screen (the default cube scene).",
+      "concepts": [
+        "**3D Viewport**: the big window where you look at and edit the scene.",
+        "**Outliner** (top right): the list of every object.",
+        "**Properties** (bottom right): settings for the selected thing.",
+        "**Timeline** (bottom): for animation, we won't need it yet.",
+        "**Toolbar** (left edge of the viewport) and **Sidebar** (right edge).",
+        "The **status bar** at the very bottom shows what each mouse button does right now."
+      ],
+      "keys": ["ui.toolbar", "ui.sidebar", "ed.undo", "ed.redo"],
+      "tasks": [
+        "Hover your mouse over each area: Viewport, Outliner, Properties, Timeline.",
+        "Hover over the viewport and press {k:ui.sidebar} to open the Sidebar. Press it again to close it.",
+        "Laptop or trackpad: open **Edit > Preferences > Input** and turn on **Emulate 3 Button Mouse**. No number pad: turn on **Emulate Numpad** there too.",
+        "On a Mac: Blender uses **Ctrl**, not Cmd, for nearly every shortcut here. Alt is your **Option** key."
+      ],
+      "check": {
+        "type": "yesno",
+        "question": "Open the Sidebar with {k:ui.sidebar}. Can you see a tab called **Item** on its right edge?",
+        "no": "Move your mouse over the 3D view first (keys go to whatever is under the mouse), then press N once. The tabs run down the Sidebar's right edge: Item, Tool, View."
+      },
+      "reward": "Boarding Pass",
+      "hints": [
+        "The Sidebar hides on the right edge of the viewport.",
+        "Hover over the viewport first, then press N.",
+        "Move your mouse over the 3D view, press N once to open, once to close. If nothing happens, click the viewport and try again."
+      ],
+      "manual": ["interface", "input-prefs"]
+    },
+    {
+      "id": "l1",
+      "number": 1,
+      "title": "Find your bearings",
+      "minutes": 9,
+      "story": "The first flag is painted on the rocks, but only a gull flying straight overhead could read it.",
+      "goal": "Move the view freely, then snap to exact views.",
+      "starter": "lesson-1-find-your-bearings.blend",
+      "concepts": [
+        "**Orbit, pan, zoom**: the three ways to move your view. The scene itself never moves.",
+        "**Front, right, top views**: snap the view to look straight along an axis.",
+        "**Perspective vs orthographic**: orthographic removes depth, so far things look the same size as near things."
+      ],
+      "keys": ["view.orbit", "view.pan", "view.zoom", "view.front", "view.right", "view.top", "view.opposite", "view.persp", "view.frame_selected", "view.frame_all", "view.pie", "view.gizmo"],
+      "tasks": [
+        "Orbit all the way around the island with {k:view.orbit}.",
+        "Pan to the lighthouse with {k:view.pan} and zoom in with {k:view.zoom}.",
+        "Press {k:view.frame_all} to see everything again.",
+        "Snap to Top view with {k:view.top}.",
+        "The stones on their sea stacks almost make a shape. Switch to orthographic with {k:view.persp}.",
+        "The stones line up into a letter. That is your flag."
+      ],
+      "check": {
+        "type": "flag",
+        "salt": "blender/5.2/intro/l1",
+        "hash": "26501481531276680db800a7a72e40bb09582301f8394b937b2c91cbc7c1b0a5",
+        "prompt": "Which letter do the stones make?",
+        "wrong": {
+          "P": "That's a P? Part of it is hiding. Look from directly above, in orthographic.",
+          "R": "Close, but perspective is bending it. Try orthographic ({k:view.persp}).",
+          "8": "It's a letter, not a number. Look at the left edge: is it straight?",
+          "D": "Look again at the middle of the shape. Orthographic Top view makes it clear."
+        },
+        "wrongDefault": "Not quite. Make sure you're in Top view ({k:view.top}) and orthographic ({k:view.persp}). The view's name in the top left should say Top Orthographic."
+      },
+      "hints": [
+        "A gull reads these rocks. Where does a gull fly?",
+        "Use Top view ({k:view.top}, or click the blue Z on the gizmo). Still blurry? Perspective is bending it.",
+        "Press {k:view.top}, then {k:view.persp} for orthographic. The top left of the viewport says Top Orthographic. Read the letter the stones make."
+      ],
+      "manual": ["navigation", "viewpoint"]
+    },
+    {
+      "id": "l2",
+      "number": 2,
+      "title": "Clear the wreckage",
+      "minutes": 8,
+      "story": "The storm dumped a pile of crates on the second flag. Clear them, but keep the barrel of lamp oil. It's stamped \"Property of the Quillfish\", and we'll need it.",
+      "goal": "Select exactly what you mean, then add, copy, and delete objects.",
+      "starter": "lesson-2-clear-the-wreckage.blend",
+      "concepts": [
+        "**Active vs selected**: you can select many objects, but only one is active (the brighter outline).",
+        "You can select in the viewport or by clicking names in the **Outliner**.",
+        "New objects appear at the **3D cursor** (the red and white ring)."
+      ],
+      "keys": ["select.click", "select.toggle", "select.all", "select.none", "select.invert", "select.box", "select.circle", "object.delete", "object.delete_now", "add.menu", "object.duplicate"],
+      "tasks": [
+        "Click one crate. {k:select.toggle} two more.",
+        "Press {k:select.none} to clear the selection.",
+        "Click the oil barrel, then press {k:select.invert} to select everything except it.",
+        "{k:select.toggle} the island ground and the lighthouse to drop them from the selection. Only crates are left.",
+        "Press {k:object.delete} and confirm. The flag is underneath.",
+        "Bonus: {k:add.menu} > Mesh > UV Sphere to add a buoy, then {k:object.duplicate} to place a second one."
+      ],
+      "check": {
+        "type": "flag",
+        "salt": "blender/5.2/intro/l2",
+        "hash": "f62843bc0b10529f16dbd090c365e1f7f82ebfdfb5368e3408cf0363dd1d02e3",
+        "prompt": "Which letter is painted on the flag?",
+        "wrong": {
+          "F": "A crate may still be covering part of it. Look for the bottom stroke.",
+          "L": "Something is still covering the top of the letter. Any crates left?",
+          "B": "That was Lesson 1's letter. Look at the flag under the crates.",
+          "3": "Seen from the wrong side? Orbit so you look at it the right way round."
+        },
+        "wrongDefault": "Not quite. If anything is still on top of the flag, delete it. Deleted the barrel by mistake? Undo with Ctrl Z, the oil is needed for the beacon."
+      },
+      "hints": [
+        "It's easier to pick what to keep than to pick every crate.",
+        "Select the barrel, then flip the selection with {k:select.invert}. Shift-click to drop the ground and lighthouse.",
+        "Click the barrel, {k:select.invert}, Shift-click the ground and the lighthouse, then press {k:object.delete} and confirm. Read the letter on the flag."
+      ],
+      "manual": ["selecting-objects", "keymap"]
+    },
+    {
+      "id": "l3",
+      "number": 3,
+      "title": "Raise the flagpole",
+      "minutes": 10,
+      "story": "The third flag is still tied to its pole, which is lying face down in the sand. Stand it back up. The rope came from the Harbor's ropewalk, so it held.",
+      "goal": "Move, rotate, and scale with axis locks and typed numbers.",
+      "starter": "lesson-3-raise-the-flagpole.blend",
+      "concepts": [
+        "**Transform** means location, rotation, and scale.",
+        "**Axis constraints**: X is red, Y is green, Z is blue.",
+        "You can **type exact numbers** while moving, rotating, or scaling.",
+        "The Sidebar's **Item** tab shows the exact values."
+      ],
+      "keys": ["transform.move", "transform.rotate", "transform.scale", "transform.axis", "transform.exclude", "transform.confirm", "transform.clear", "screen.redo_last"],
+      "tasks": [
+        "Click the pole (the thin line poking out of the sand). Press {k:ui.sidebar} to watch its values.",
+        "Type [[R]] [[X]] [[9]] [[0]] [[Enter]] to stand it up. The flag cloth was face down, so the letter now faces you.",
+        "Press [[G]] [[Z]] and drag until the pole sits on the sand. Click to confirm.",
+        "It's too short. Type [[S]] [[1]] [[.]] [[5]] [[Enter]].",
+        "Oops test: press [[G]], move the mouse, then [[Right click]] to cancel. Nothing moved.",
+        "Rotate again, then press {k:screen.redo_last} and change the angle in the panel that pops up. (Set it back to 90 when you're done.)"
+      ],
+      "check": {
+        "type": "flag",
+        "salt": "blender/5.2/intro/l3",
+        "hash": "a712aef8b95652082e51f52c9233587c6553852d8a2b7bb252561e91a2aa06b3",
+        "prompt": "Which letter is on the flag? (Front view, {k:view.front}, shows it best.)",
+        "wrong": {
+          "V": "Upside down? Your pole may point into the sand. Type R X 180 Enter.",
+          "H": "Look at the top of the letter. Do the two sides meet?"
+        },
+        "wrongDefault": "Not quite. Stand the pole fully upright (R X 90 Enter), then press {k:view.front} for Front view.",
+        "followup": {
+          "type": "number",
+          "question": "Check your work: what does the Sidebar's Item tab show for **Rotation X**?",
+          "expect": [90],
+          "replies": {
+            "-90": "Your pole points down into the sand. Type R X 180 Enter, and it will read 90.",
+            "270": "That's the same as -90, so the pole points into the sand. Type R X 180 Enter.",
+            "0": "It hasn't rotated yet. Select the pole, then R X 90 Enter."
+          },
+          "replyDefault": "Not 90 yet. Press Alt R to reset the rotation, then R X 90 Enter.",
+          "success": "Exactly 90. The pole stands straight."
+        }
+      },
+      "hints": [
+        "The pole tipped over sideways, along the red line.",
+        "Rotate ([[R]]) locked to the X axis, and type the angle instead of dragging.",
+        "Select the pole, then [[R]] [[X]] [[9]] [[0]] [[Enter]]. Then [[G]] [[Z]] to set it on the sand, and [[S]] [[1]] [[.]] [[5]] [[Enter]]. Press {k:view.front} and read the flag."
+      ],
+      "manual": ["transform", "axis-locking"]
+    },
+    {
+      "id": "l4",
+      "number": 4,
+      "title": "Inside the boulder",
+      "minutes": 8,
+      "story": "Something glints inside the big boulder. The fourth flag isn't painted on it. It's hidden inside it.",
+      "goal": "Switch to Edit Mode and pick vertices, edges, and faces.",
+      "starter": "lesson-4-inside-the-boulder.blend",
+      "concepts": [
+        "A **mesh** is made of **vertices** (points), **edges** (lines), and **faces** (surfaces).",
+        "**Select modes** decide which of those you click.",
+        "An **edge loop** is a ring of connected edges.",
+        "**X-ray** lets you see and select through the surface."
+      ],
+      "keys": ["mode.edit", "mode.pie", "mesh.vert", "mesh.edge", "mesh.face", "mesh.loop_select", "view.xray", "view.shading_pie", "view.hide"],
+      "tasks": [
+        "Select the boulder and press {k:mode.edit}.",
+        "Press {k:mesh.vert}, {k:mesh.edge}, {k:mesh.face} in turn, and click a vertex, an edge, and a face in each mode.",
+        "{k:mesh.loop_select} an edge to grab a whole loop.",
+        "Go back to vertex mode and turn on X-ray with {k:view.xray}. A cluster of dots floats inside the boulder.",
+        "Orbit until the dots read as a letter. Front view ({k:view.front}) helps."
+      ],
+      "check": {
+        "type": "flag",
+        "salt": "blender/5.2/intro/l4",
+        "hash": "555f1ade942d37d9f002f0f20f2c4e43ca7f1e9a096f1e1d2baf6064ed14ace2",
+        "prompt": "Which letter do the hidden dots make?",
+        "wrong": {
+          "U": "You're looking from above or below. Try Front view ({k:view.front}).",
+          "N": "Turned on its side? Try Front view ({k:view.front}).",
+          "O": "Almost. Look at the right side: is it closed?",
+          "G": "Look again at the right side, there's no bar.",
+          "D": "Seen from behind, it flips. Use Front view ({k:view.front}), not Back."
+        },
+        "wrongDefault": "Not quite. Be in Edit Mode, vertex select, X-ray on, then Front view ({k:view.front})."
+      },
+      "hints": [
+        "The glint isn't on the surface. You need to see through stone, and see the points it's made of.",
+        "Be in Edit Mode, vertex select ({k:mesh.vert}), and turn on X-ray ({k:view.xray}).",
+        "Select the boulder, {k:mode.edit}, press {k:mesh.vert}, then {k:view.xray}. Press {k:view.front} for Front view. The dots inside form the letter."
+      ],
+      "manual": ["mesh-selecting", "select-loops", "shading"]
+    },
+    {
+      "id": "l5",
+      "number": 5,
+      "title": "Hollow the lantern",
+      "minutes": 10,
+      "story": "The beacon needs a lantern box. The fifth flag was sealed inside the old one when it was cast.",
+      "goal": "Change shape with the four core modeling tools.",
+      "starter": "lesson-5-hollow-the-lantern.blend",
+      "concepts": [
+        "**Extrude** pulls new geometry out of a selection.",
+        "**Inset** makes a smaller face inside a face.",
+        "**Loop cut** adds a ring of edges for more detail.",
+        "**Bevel** rounds sharp edges."
+      ],
+      "keys": ["mesh.extrude", "mesh.inset", "mesh.loopcut", "mesh.bevel"],
+      "tasks": [
+        "Select the lantern box, press {k:mode.edit}, then face mode {k:mesh.face}.",
+        "Click the top face. Type [[I]] [[0]] [[.]] [[2]] [[Enter]] to inset it.",
+        "Type [[E]] [[-]] [[0]] [[.]] [[8]] [[Enter]] to push the face down. The box is now hollow.",
+        "Look down inside. The flag was sealed in there.",
+        "Bonus: {k:mesh.loopcut} on a side to add a band around the middle.",
+        "Bonus: select the top rim edges and {k:mesh.bevel}, scroll to 2 segments for a softer edge."
+      ],
+      "check": {
+        "type": "flag",
+        "salt": "blender/5.2/intro/l5",
+        "hash": "32189b69e7052b5eafb450e4d28f6b18cf731a662613ce54d22f494eb2fff748",
+        "aliases": { "0": "O" },
+        "prompt": "What shape (letter) was sealed in the lantern?",
+        "wrong": {
+          "Q": "No tail on this one. Look again from straight above.",
+          "C": "Is it open on one side? Orbit and look straight down into the box.",
+          "D": "Look straight down ({k:view.top}). Is one side flat?"
+        },
+        "wrongDefault": "Not quite. Look straight down into the hollow box with {k:view.top}.",
+        "followup": {
+          "type": "number",
+          "optional": true,
+          "question": "Bonus: turn on **Overlays > Statistics** (the overlapping circles icon, top right of the viewport). How many **faces** does the lantern box have?",
+          "expect": [14, 18],
+          "replies": {
+            "6": "That's the starting cube. Did the inset and extrude happen on this object?",
+            "10": "Inset done, but the extrude is missing. Select the inner face, then E -0.8 Enter."
+          },
+          "replyDefault": "If you beveled, the count goes higher, and that counts too. Inset plus extrude alone gives 14, and the loop cut adds 4 more.",
+          "success": "That matches. 14 means inset and extrude, 18 means you added the loop cut too.",
+          "acceptAbove": 18
+        }
+      },
+      "hints": [
+        "To get inside a box without breaking it, make a rim first, then dig down.",
+        "Inset ([[I]]) the top face, then extrude ([[E]]) with a negative number.",
+        "Face mode {k:mesh.face}, click the top face, [[I]] [[0]] [[.]] [[2]] [[Enter]], then [[E]] [[-]] [[0]] [[.]] [[8]] [[Enter]]. Orbit to look down inside."
+      ],
+      "manual": ["extrude", "inset", "loopcut", "bevel"]
+    },
+    {
+      "id": "l6",
+      "number": 6,
+      "title": "Build the beacon",
+      "minutes": 12,
+      "story": "Five flags found. The last one isn't hidden anywhere. It appears when the island has a beacon again.",
+      "goal": "Build a simple beacon tower from Blender's default cube, using everything so far.",
+      "starter": "lesson-6-build-the-beacon.blend",
+      "starterNote": "Or just use File > New > General. It's the same default cube.",
+      "concepts": [
+        "No new keys. Every step is a skill you already used to find a flag.",
+        "The steps are hidden. Try it from memory, and tap **Show me** on any step you need."
+      ],
+      "keys": ["mesh.extrude", "mesh.inset", "mesh.loopcut", "add.menu", "transform.scale", "transform.move", "overlay.stats"],
+      "build": [
+        { "goal": "Get ready to edit the cube's faces.", "show": "Click the cube, {k:mode.edit}, then face mode {k:mesh.face}." },
+        { "goal": "Make the tower taller.", "show": "Click the top face. [[E]] [[Z]] [[1]] [[.]] [[5]] [[Enter]]." },
+        { "goal": "Make a rim on top.", "show": "[[I]] [[0]] [[.]] [[2]] [[Enter]]." },
+        { "goal": "Dip a recess for the lamp.", "show": "[[E]] [[-]] [[0]] [[.]] [[3]] [[Enter]]." },
+        { "goal": "Add a band around the middle of the tower.", "show": "Hover over a side of the tower, {k:mesh.loopcut}, click once to place the cut, then click again without moving to keep it centered." },
+        { "goal": "Add the lamp.", "show": "{k:mode.edit} back to Object Mode. {k:add.menu} > Mesh > UV Sphere." },
+        { "goal": "Fit the lamp into the recess.", "show": "[[S]] [[0]] [[.]] [[3]] [[Enter]], then [[G]] [[Z]] and drag it into the recess." }
+      ],
+      "check": {
+        "type": "count",
+        "salt": "blender/5.2/intro/l6",
+        "hash": "a1f66737ff7696cf695217fb7be598906b89b059ce20866585bc2eb57f06d60f",
+        "revealLetter": "N",
+        "prompt": "Turn on **Overlays > Statistics**, select the tower, and look in the top left of the viewport. How many **faces** does the tower have?",
+        "wrong": {
+          "18": "18 means one step is missing. Look from the side for the middle band (loop cut), then look down for the lamp dip (the second extrude).",
+          "14": "14 means two steps are missing. Check the rim (inset) and the dip (second extrude), then the band (loop cut).",
+          "10": "Only the first extrude so far. Keep going: rim, dip, band.",
+          "6": "That's the plain cube. Start with the first extrude: E Z 1.5 Enter on the top face.",
+          "534": "That count includes the lamp sphere. Click just the tower and read the count again.",
+          "512": "That's the lamp sphere. Click the tower instead and read the count again."
+        },
+        "wrongDefault": "Hmm, unexpected. Undo back a step with Ctrl Z, or start again from a fresh cube (File > New > General). Make sure the Statistics count is for the tower only."
+      },
+      "hints": [
+        "Taller first, then a rim, then a dip for the lamp, then a band around the middle. Each one is a skill you already found a flag with.",
+        "The tools, in order: Extrude, Inset, Extrude (negative), Loop cut, then Add > UV Sphere.",
+        "Tap **Show me** on each build step to see its exact keys. The finished tower has 24 vertices and 22 faces."
+      ],
+      "manual": ["overlays", "object-types"]
+    }
+  ],
+  "finale": {
+    "prompt": "Six flags, six letters. Spell the beacon's word to light it.",
+    "story": [
+      "The beacon catches, sputters, and roars into light.",
+      "The Fog rolls back from the shore. Out on the water, a library-ship, the Quillfish, turns toward the light and sails on toward the Harbor.",
+      "The Old Keeper watches it go. \"The light didn't go out on its own. Someone at the Tide Archive will know more.\""
+    ],
+    "share": "Take a screenshot of your beacon in Blender (View > Viewport Render Image) and send it to a friend.",
+    "wrongDefault": "The beacon flickers but doesn't catch. Check the letters in order, Lesson 1 to Lesson 6."
+  }
+}

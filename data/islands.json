@@ -1,0 +1,13 @@
+{
+  "world": "The Lantern Isles",
+  "hub": "The Quillfish",
+  "islands": [
+    { "id": "signal", "name": "Signal Island", "program": "Blender", "words": ["BEACON", "KEEPER", "SIGNAL"], "status": "open", "path": "blender/", "pitch": "Rebuild the beacon so ships can find their way through the Fog.", "map": { "x": 160, "y": 120 } },
+    { "id": "harbor", "name": "The Harbor", "program": "Git", "words": ["HARBOR", "ANCHOR", "VOYAGE"], "status": "soon", "path": "harbor/", "pitch": "Restore the Quillfish's logbook so the ship can dock and share its records.", "map": { "x": 330, "y": 190 } },
+    { "id": "kiteworks", "name": "The Kiteworks", "program": "Unity", "words": ["GLIDER"], "status": "fog", "pitch": "Get the message kites flying between the isles again.", "map": { "x": 470, "y": 90 } },
+    { "id": "tide", "name": "The Tide Archive", "program": "SQL", "words": ["LEDGER"], "status": "fog", "pitch": "Query the flooded ledgers to find who sabotaged the lighthouse.", "map": { "x": 520, "y": 230 } },
+    { "id": "relay", "name": "The Static Relay", "program": "Bash", "words": ["STATIC"], "status": "fog", "pitch": "Rebuild the radio network with pipes, grep, and scripts.", "map": { "x": 90, "y": 250 } },
+    { "id": "clockwork", "name": "The Clockwork Port", "program": "PowerShell", "words": ["GEARED"], "status": "fog", "pitch": "Automate the cranes and gates with objects and cmdlets.", "map": { "x": 260, "y": 60 } },
+    { "id": "mirage", "name": "The Mirage Reef", "program": "Unreal", "words": ["MIRAGE"], "status": "fog", "pitch": "Build a playable level that lures the Grey Squall away for good.", "map": { "x": 640, "y": 150 } }
+  ]
+}

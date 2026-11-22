@@ -1,0 +1,1 @@
+{ "type": "module", "private": true, "scripts": { "check": "node scripts/check-data.mjs", "check:links": "node scripts/check-links.mjs", "serve": "python3 -m http.server 8000" } }

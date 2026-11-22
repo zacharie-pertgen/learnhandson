@@ -1,0 +1,23 @@
+{
+  "version": "5.2",
+  "base": "https://docs.blender.org/manual/en/5.2/",
+  "links": {
+    "interface":        { "title": "Interface overview", "path": "interface/index.html" },
+    "input-prefs":      { "title": "Input preferences", "path": "editors/preferences/input.html" },
+    "navigation":       { "title": "Navigation", "path": "editors/3dview/navigate/navigation.html" },
+    "viewpoint":        { "title": "Viewpoint", "path": "editors/3dview/navigate/viewpoint.html" },
+    "selecting-objects":{ "title": "Selecting objects", "path": "scene_layout/object/selecting.html" },
+    "keymap":           { "title": "Default keymap", "path": "interface/keymap/blender_default.html" },
+    "transform":        { "title": "Transform", "path": "scene_layout/object/editing/transform/index.html" },
+    "axis-locking":     { "title": "Axis locking", "path": "scene_layout/object/editing/transform/control/axis_locking.html" },
+    "mesh-selecting":   { "title": "Mesh selecting", "path": "modeling/meshes/selecting/introduction.html" },
+    "select-loops":     { "title": "Select loops", "path": "modeling/meshes/selecting/loops.html" },
+    "shading":          { "title": "Shading and X-ray", "path": "editors/3dview/display/shading.html" },
+    "extrude":          { "title": "Extrude", "path": "modeling/meshes/editing/mesh/extrude.html" },
+    "inset":            { "title": "Inset Faces", "path": "modeling/meshes/editing/face/inset_faces.html" },
+    "loopcut":          { "title": "Loop Cut", "path": "modeling/meshes/tools/loop.html" },
+    "bevel":            { "title": "Bevel", "path": "modeling/meshes/editing/edge/bevel.html" },
+    "overlays":         { "title": "Overlays (Statistics)", "path": "editors/3dview/display/overlays.html" },
+    "object-types":     { "title": "Adding objects", "path": "scene_layout/object/types.html" }
+  }
+}
